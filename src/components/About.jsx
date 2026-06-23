@@ -85,6 +85,14 @@ export default function About() {
               <p style={{
                 fontSize: '1.15rem',
                 lineHeight: '1.8',
+                color: 'var(--text-secondary)',
+                marginBottom: '1.5rem'
+              }}>
+                I can effectively read and write <strong>technical documentation in English</strong>. While my speaking skills are currently limited, I am proactively practicing every day to improve my verbal communication.
+              </p>
+              <p style={{
+                fontSize: '1.15rem',
+                lineHeight: '1.8',
                 color: 'var(--text-muted)',
                 fontStyle: 'italic',
                 borderLeft: '4px solid var(--primary-color)',
