@@ -54,7 +54,7 @@ export default function Education() {
               <h4>FPT Polytechnic College</h4>
               <div className="education-details">
                 <span className="date">Jan 2018 - Jan 2021</span>
-                <span className="gpa">GPA: 3.24</span>
+                <span className="gpa">GPA: 8.1/10</span>
               </div>
             </div>
           </div>
