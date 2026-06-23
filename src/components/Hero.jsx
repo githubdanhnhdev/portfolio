@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import VisitorCounter from './VisitorCounter';
 
 const FLOATING_ICONS = [
   { className: 'fab fa-php', speed: 0.1 },
@@ -81,6 +82,7 @@ export default function Hero() {
               <a href="#contact" className="btn btn-primary">Get In Touch</a>
               <a href="#projects" className="btn btn-secondary">View Projects</a>
             </div>
+            <VisitorCounter />
           </div>
           <div className="hero-image">
             <div className="avatar-container">
