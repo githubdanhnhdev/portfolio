@@ -1,6 +1,6 @@
 # Nguyen Huu Danh — Portfolio Website (React)
 
-![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgithubdanhnhdev%2Fportfolio&title=Views&edge_flat=false)
+![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Fgithubdanhnhdev%2Fportfolio&label=Views&icon=github&color=%23198754&message=&style=flat&tz=UTC)
 
 A modern, responsive portfolio website rebuilt with **React 19 + Vite**, showcasing skills and experience as a Full-Stack Developer.
 
