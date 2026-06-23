@@ -465,119 +465,19 @@ section[id] {
 }
 
 /* ===== VISITOR COUNTER ===== */
-@keyframes pulseRing {
-  0% { transform: scale(0.8); opacity: 1; }
-  100% { transform: scale(2.2); opacity: 0; }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
 .visitor-counter {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
   margin-top: var(--spacing-lg);
-  padding: 0.6rem 1.2rem;
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 50px;
-  backdrop-filter: blur(8px);
-  transition: var(--transition-normal);
 }
 
-.visitor-counter:hover {
-  background: rgba(59, 130, 246, 0.14);
-  border-color: rgba(59, 130, 246, 0.4);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+.visitor-badge {
+  height: 22px;
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
 }
 
-.visitor-dot {
-  position: relative;
-  width: 8px;
-  height: 8px;
-  background: #10B981;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.visitor-dot::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: #10B981;
-  animation: pulseRing 1.8s ease-out infinite;
-}
-
-.visitor-stats {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.visitor-stat {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.visitor-stat i {
-  font-size: 0.75rem;
-  color: var(--primary-color);
-  opacity: 0.8;
-}
-
-.visitor-number {
-  font-size: 0.95rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0.02em;
-}
-
-.visitor-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-weight: var(--font-weight-medium);
-}
-
-.visitor-divider {
-  width: 1px;
-  height: 16px;
-  background: var(--border-color);
-}
-
-/* Loading state */
-.visitor-counter--loading {
-  gap: 0.6rem;
-}
-
-.visitor-pulse {
-  width: 60px;
-  height: 12px;
-  border-radius: 6px;
-  background: linear-gradient(90deg,
-    rgba(255,255,255,0.05) 25%,
-    rgba(255,255,255,0.15) 50%,
-    rgba(255,255,255,0.05) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-.visitor-dot--offline {
-  background: var(--text-muted);
-}
-
-.visitor-dot--offline::before {
-  display: none;
-}
-
-.visitor-counter--error {
-  opacity: 0.6;
+.visitor-badge:hover {
+  opacity: 1;
 }
 
 /* ===== ABOUT SECTION ===== */
