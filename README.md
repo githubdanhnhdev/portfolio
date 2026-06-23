@@ -98,6 +98,18 @@ npm run preview
 - **Phone**: +84 797456369
 - **Location**: Ho Chi Minh City, Vietnam
 
+## 🚀 Deployment
+
+Live at: **[portfolio.danhnh.online](https://portfolio.danhnh.online)**
+
+| Layer | Service | Role |
+|---|---|---|
+| **Hosting** | [Vercel](https://vercel.com) | Build & serve the React app |
+| **CDN / SSL** | [Cloudflare](https://cloudflare.com) | Proxy, DDoS protection, SSL/TLS |
+| **Domain** | [Namecheap](https://namecheap.com) | Domain registrar |
+
+**Auto-deploy**: Every push to `main` branch triggers a new Vercel deployment automatically.
+
 ---
 
-Built with ❤️ using React, Vite, and modern web technologies
+Built with ❤️ using React, Vite, Tailwind CSS — Hosted on Vercel, protected by Cloudflare
