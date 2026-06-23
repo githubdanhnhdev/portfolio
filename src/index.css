@@ -568,6 +568,18 @@ section[id] {
   animation: shimmer 1.5s infinite;
 }
 
+.visitor-dot--offline {
+  background: var(--text-muted);
+}
+
+.visitor-dot--offline::before {
+  display: none;
+}
+
+.visitor-counter--error {
+  opacity: 0.6;
+}
+
 /* ===== ABOUT SECTION ===== */
 .about {
   padding: var(--spacing-2xl) 0;

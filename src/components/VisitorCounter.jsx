@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 
-const HITS_URL =
-  'https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgithubdanhnhdev%2Fportfolio&title=Views&edge_flat=false';
+// countapi.xyz — free counter API with CORS support
+// Each unique namespace/key is a separate counter
+const COUNTER_API = 'https://api.countapi.xyz/hit/portfolio-danhnhdev/pageviews';
 
-// Easing function for smooth count animation
 function easeOutQuart(t) {
   return 1 - Math.pow(1 - t, 4);
 }
@@ -14,14 +14,14 @@ function useCountUp(target, duration = 1800) {
   const rafRef = useRef(null);
 
   useEffect(() => {
-    if (!target || target === 0) return;
+    if (!target || target <= 0) return;
+    startRef.current = null;
 
     const step = (timestamp) => {
       if (!startRef.current) startRef.current = timestamp;
       const elapsed = timestamp - startRef.current;
       const progress = Math.min(elapsed / duration, 1);
-      const easedProgress = easeOutQuart(progress);
-      setCount(Math.floor(easedProgress * target));
+      setCount(Math.floor(easeOutQuart(progress) * target));
       if (progress < 1) {
         rafRef.current = requestAnimationFrame(step);
       } else {
@@ -39,35 +39,26 @@ function useCountUp(target, duration = 1800) {
 }
 
 export default function VisitorCounter() {
-  const [todayCount, setTodayCount] = useState(null);
-  const [totalCount, setTotalCount] = useState(null);
+  const [total, setTotal] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
-  const animatedToday = useCountUp(todayCount);
-  const animatedTotal = useCountUp(totalCount);
+  const animatedTotal = useCountUp(total);
 
   useEffect(() => {
-    // Fetch the SVG badge and parse today/total counts from the text
-    fetch(HITS_URL)
-      .then((res) => res.text())
-      .then((svgText) => {
-        // The SVG contains text nodes like "today" count and "total" count
-        // hits.seeyoufarm returns: "N / M" where N=today, M=total
-        const matches = [...svgText.matchAll(/>(\d+)<\/text>/g)];
-        const numbers = matches
-          .map((m) => parseInt(m[1], 10))
-          .filter((n) => !isNaN(n));
-
-        if (numbers.length >= 2) {
-          setTodayCount(numbers[numbers.length - 2]);
-          setTotalCount(numbers[numbers.length - 1]);
-        } else if (numbers.length === 1) {
-          setTotalCount(numbers[0]);
+    fetch(COUNTER_API)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        if (data && typeof data.value === 'number') {
+          setTotal(data.value);
+        } else {
+          setError(true);
         }
       })
-      .catch(() => {
-        // Silently fail — no error shown to user
-      })
+      .catch(() => setError(true))
       .finally(() => setLoading(false));
   }, []);
 
@@ -80,22 +71,27 @@ export default function VisitorCounter() {
     );
   }
 
-  if (totalCount === null) return null;
+  if (error || total === null) {
+    return (
+      <div className="visitor-counter visitor-counter--error">
+        <div className="visitor-dot visitor-dot--offline" />
+        <div className="visitor-stats">
+          <div className="visitor-stat">
+            <i className="fas fa-eye" />
+            <span className="visitor-number">—</span>
+            <span className="visitor-label">total views</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="visitor-counter">
       <div className="visitor-dot" />
       <div className="visitor-stats">
-        {todayCount !== null && (
-          <div className="visitor-stat">
-            <i className="fas fa-eye" />
-            <span className="visitor-number">{animatedToday.toLocaleString()}</span>
-            <span className="visitor-label">today</span>
-          </div>
-        )}
-        {todayCount !== null && <div className="visitor-divider" />}
         <div className="visitor-stat">
-          <i className="fas fa-users" />
+          <i className="fas fa-eye" />
           <span className="visitor-number">{animatedTotal.toLocaleString()}</span>
           <span className="visitor-label">total views</span>
         </div>
