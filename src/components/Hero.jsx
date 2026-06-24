@@ -75,8 +75,7 @@ export default function Hero() {
             </h1>
             <h2 className="hero-subtitle">Backend &amp; Full-Stack Developer</h2>
             <p className="hero-description">
-              Passionate Backend &amp; Full-Stack Developer with expertise in PHP (Laravel), Node.js, Vue.js, databases, and AWS infrastructure.
-              Skilled in designing scalable architectures, AI integrations, and automation systems. Aspiring Technical Lead.
+              5+ years building robust CRM, ERP &amp; automation systems. Core expertise in PHP Laravel — architecting scalable backends and enterprise apps. Adaptable across Node.js and Golang for microservices &amp; high-concurrency systems. Practical proficiency in Vue.js &amp; ReactJS for end-to-end full-stack delivery.
             </p>
             <div className="hero-buttons">
               <a href="#contact" className="btn btn-primary">Get In Touch</a>

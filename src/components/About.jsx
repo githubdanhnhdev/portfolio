@@ -72,7 +72,7 @@ export default function About() {
                 marginBottom: '1.5rem',
                 fontWeight: '400'
               }}>
-                I am a results-driven <strong>Fullstack Developer</strong> with a strong focus on Backend development and <strong>6 years of experience</strong> crafting robust CRM, ERP, and advanced automation systems.
+                I'm a <strong>Backend-focused Fullstack Developer</strong> with <strong>5+ years of experience</strong> building robust CRM, ERP, and automation systems for enterprise clients.
               </p>
               <p style={{
                 fontSize: '1.15rem',
@@ -80,7 +80,7 @@ export default function About() {
                 color: 'var(--text-secondary)',
                 marginBottom: '1.5rem'
               }}>
-                My core expertise lies in the <strong>PHP Laravel</strong> and <strong>Node.js</strong> ecosystems, where I architect high-performance backends, scalable microservices, and event-driven architectures. To complement my backend skills, I bring solid experience in <strong>Vue.js</strong>, enabling me to build functional frontends and deliver complete full-stack solutions.
+                My core stack is <strong>PHP Laravel</strong>, where I design high-performance backends and scalable enterprise architectures. I possess a strong adaptability to deliver high-quality results in <strong>Node.js</strong> and <strong>Golang</strong> environments, supporting microservices and high-concurrency systems. Practical proficiency in <strong>Vue.js &amp; ReactJS</strong> for end-to-end full-stack delivery.
               </p>
               <p style={{
                 fontSize: '1.15rem',
@@ -99,7 +99,7 @@ export default function About() {
                 paddingLeft: '1.25rem',
                 marginTop: '1.75rem'
               }}>
-                "Having consistently focused on building high-impact systems, I am currently seeking a stable, forward-thinking environment where I can commit long-term, drive architectural excellence, and grow together with the company."
+                "I thrive on continuous learning and building high-impact systems. Looking for a stable, growth-oriented environment where I can commit long-term and drive architectural excellence."
               </p>
             </div>
 
@@ -115,16 +115,16 @@ export default function About() {
               zIndex: 1
             }}>
               <div className="stat-item" style={{ textAlign: 'center' }}>
-                <h4 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--primary-color)', marginBottom: '0.25rem' }}>6</h4>
+                <h4 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--primary-color)', marginBottom: '0.25rem' }}>5+</h4>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', fontWeight: '500' }}>Years of Experience</p>
               </div>
               <div className="stat-item" style={{ textAlign: 'center' }}>
-                <h4 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--accent-color)', marginBottom: '0.25rem' }}>Laravel & Node</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', fontWeight: '500' }}>Core Specialization</p>
+                <h4 style={{ fontSize: '2rem', fontWeight: '800', color: 'var(--accent-color)', marginBottom: '0.25rem' }}>Laravel / Node </h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', fontWeight: '500' }}>Core Stack</p>
               </div>
               <div className="stat-item" style={{ textAlign: 'center' }}>
-                <h4 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--secondary-color)', marginBottom: '0.25rem' }}>Long-term</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', fontWeight: '500' }}>Growth & Commitment</p>
+                <h4 style={{ fontSize: '2rem', fontWeight: '800', color: 'var(--secondary-color)', marginBottom: '0.25rem' }}>Full-Stack</h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', fontWeight: '500' }}>End-to-End Delivery</p>
               </div>
             </div>
           </div>
