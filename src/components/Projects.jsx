@@ -15,7 +15,7 @@ const PROJECTS = [
       'Maintenance: Resolved ad-hoc critical incidents within 24 hours and delivered bi-weekly progress reports to stakeholders.',
       'Vibe Coding: Leveraged Vibe Coding methodologies utilizing Cursor/Antigravity to accelerate frontend UI development (Vue.js, Naive UI) and Laravel API boilerplate by 40%, saving approximately [2-3 weeks] of initial setup time and optimizing engineering focus toward database tuning and queue management.'
     ],
-    tags: ['Vue 3', 'NaiveUI', 'Laravel', 'MySQL', 'Elasticsearch', 'Redis', 'Go', 'Fiber', 'gRPC', 'Bun', 'ElysiaJS', 'MongoDB', 'FFmpeg', 'Zabbix'],
+    tags: ['Vue 3', 'NaiveUI', 'Laravel', 'MySQL', 'Elasticsearch', 'Redis', 'Go', 'Fiber', 'gRPC', 'Bun', 'ElysiaJS', 'MongoDB', 'Puppeteer', 'FFmpeg', 'Zabbix'],
     link: 'https://domain.longtu.club/',
     secondaryLinks: [
       { label: 'Check Automation Engine', link: 'http://160.19.158.249:33004/health' },
