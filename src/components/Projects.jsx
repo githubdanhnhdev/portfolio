@@ -15,7 +15,7 @@ const PROJECTS = [
       'Maintenance: Resolved ad-hoc critical incidents within 24 hours and delivered bi-weekly progress reports to stakeholders.',
       'Vibe Coding: Leveraged Vibe Coding methodologies utilizing Cursor/Antigravity to accelerate frontend UI development (Vue.js, Naive UI) and Laravel API boilerplate by 40%, saving approximately [2-3 weeks] of initial setup time and optimizing engineering focus toward database tuning and queue management.'
     ],
-    tags: ['Vue 3', 'NaiveUI', 'Laravel', 'MySQL', 'Elasticsearch', 'Redis', 'Go', 'Fiber', 'gRPC', 'Bun', 'ElysiaJS', 'MongoDB', 'Puppeteer', 'FFmpeg', 'Zabbix'],
+    tags: ['Vue 3', 'NaiveUI', 'Laravel', 'MySQL', 'Elasticsearch', 'Redis', 'Go', 'Fiber', 'gRPC', 'Node.js', 'NestJS', 'MongoDB', 'Puppeteer', 'FFmpeg', 'Zabbix'],
     link: 'https://domain.longtu.club/',
     secondaryLinks: [
       { label: 'Check Automation Engine', link: 'http://160.19.158.249:33004/health' },
@@ -31,11 +31,10 @@ const PROJECTS = [
     desc: 'A highly distributed system focused on task automation, specifically engineered to automatically execute Google keyword searches and anchor text searches. The architecture ensures high scalability across multiple background workers, featuring advanced anti-bot capabilities to seamlessly bypass Google\'s strict CAPTCHAs and extract Search Engine Results Page (SERP) data without human intervention.',
     responsibilities: [
       'High-Performance API: Developed a fast RESTful API core using Go (Fiber) to orchestrate and schedule thousands of concurrent domain ranking and anchor text search tasks.',
-      'Core Search Engine: Designed the primary automation workers utilizing Bun and Puppeteer to navigate Google, handling [3,000+] multi-page keyword queries daily, parsing complex DOM structures, and locating target domains up to [5-10] paginated results deep.',
-      'Advanced CAPTCHA Evasion: Implemented robust anti-bot algorithms within the search workers to mimic human behaviors, utilizing dynamic proxy rotation and intelligent browser fingerprint profiling to achieve a [90%+] successful CAPTCHA bypass rate at scale.',
+      'Core Search Engine: Designed the primary automation workers utilizing Node.js/NestJS to mimic human behaviors, utilizing dynamic proxy rotation and intelligent browser fingerprint profiling to achieve a [90%+] successful CAPTCHA bypass rate at scale.',
       'Data Pipelines: Engineered secure webhook callbacks to reliably extract, verify, and sync the exact domain SERP rankings and anchor text data back to central databases.'
     ],
-    tags: ['Go', 'Fiber', 'gRPC', 'Bun', 'ElysiaJS', 'Puppeteer', 'MySQL', 'MongoDB', 'Redis', 'Docker'],
+    tags: ['Go', 'Fiber', 'gRPC', 'Node.js', 'NestJS', 'Puppeteer', 'MySQL', 'MongoDB', 'Redis', 'Docker'],
     link: 'https://search-api.longtu.club',
     secondaryLinks: [
       { label: 'Worker Service', link: 'http://160.19.158.217:33004/health' }
@@ -49,13 +48,13 @@ const PROJECTS = [
     teamSize: '2',
     desc: 'A specialized microservice designed for automated proxy rotation, health monitoring, and IP distribution. The platform securely manages thousands of proxies simultaneously, employing intelligent rotation algorithms and real-time health checks to ensure uninterrupted operations across multiple distributed background automation tools.',
     responsibilities: [
-      'Project Setup: Initialized the project structure with Bun and ElysiaJS, and Dockerized the entire application for deployment.',
+      'Project Setup: Initialized the project structure with Node.js and NestJS, and Dockerized the entire application for deployment.',
       'Rotation Engine: Developed the core proxy distribution logic to assign working IPs to client tools, managing [200+] concurrent proxy rotations and completely eliminating rate limits and IP bans for scraping workers.',
       'Health Checks (Cron): Built background cron tasks executing every [30 seconds] to continuously verify proxy health, automatically filtering and disabling dead/blocked IPs to maintain an active pool with [98%+] availability.',
       '3rd-Party Syncing: Handled auto bulk proxy imports from external providers (e.g., ZingProxy, KiotProxy).',
-      'Core APIs: Built fast RESTful APIs supporting CRUD operations, dynamic pagination, and detailed filtering, leveraging ElysiaJS and MongoDB indexing to achieve an ultra-low latency of under 20ms per proxy distribution request.'
+      'Core APIs: Built fast RESTful APIs supporting CRUD operations, dynamic pagination, and detailed filtering, leveraging NestJS and MongoDB indexing to achieve an ultra-low latency of under 20ms per proxy distribution request.'
     ],
-    tags: ['Go', 'Fiber', 'gRPC', 'Bun', 'ElysiaJS', 'MongoDB', 'Typegoose', 'Swagger', 'Docker'],
+    tags: ['Go', 'Fiber', 'gRPC', 'Node.js', 'NestJS', 'MongoDB', 'Typegoose', 'Swagger', 'Docker'],
     link: 'http://65.19.178.20:51006/health'
   },
   {
