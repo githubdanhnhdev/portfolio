@@ -15,7 +15,7 @@ const PROJECTS = [
       'Maintenance: Resolved ad-hoc critical incidents within 24 hours and delivered bi-weekly progress reports to stakeholders.',
       'Vibe Coding: Leveraged Vibe Coding methodologies utilizing Cursor/Antigravity to accelerate frontend UI development (Vue.js, Naive UI) and Laravel API boilerplate by 40%, saving approximately [2-3 weeks] of initial setup time and optimizing engineering focus toward database tuning and queue management.'
     ],
-    tags: ['Vue 3', 'NaiveUI', 'Laravel', 'MySQL', 'Elasticsearch', 'Redis', 'Go', 'Fiber', 'Node.js', 'NestJS', 'MongoDB', 'Puppeteer', 'NATS', 'FFmpeg', 'Zabbix'],
+    tags: ['Vue 3', 'NaiveUI', 'Laravel', 'MySQL', 'Elasticsearch', 'Redis', 'Go', 'Fiber', 'Node.js/NestJS', 'MongoDB', 'Puppeteer', 'NATS', 'FFmpeg', 'Zabbix'],
     link: 'https://domain.longtu.club/',
     secondaryLinks: [
       { label: 'Check Automation Engine', link: 'http://160.19.158.249:33004/health' },
@@ -34,7 +34,7 @@ const PROJECTS = [
       'Core Search Engine: Designed the primary automation workers utilizing Node.js/NestJS to mimic human behaviors, utilizing dynamic proxy rotation and intelligent browser fingerprint profiling to achieve a [90%+] successful CAPTCHA bypass rate at scale.',
       'Data Pipelines: Engineered secure webhook callbacks to reliably extract, verify, and sync the exact domain SERP rankings and anchor text data back to central databases.'
     ],
-    tags: ['Go', 'Fiber', 'Node.js', 'NestJS', 'Puppeteer', 'MySQL', 'MongoDB', 'Redis', 'NATS', 'Docker'],
+    tags: ['Go', 'Fiber', 'Node.js/NestJS', 'Puppeteer', 'MySQL', 'MongoDB', 'Redis', 'NATS', 'Docker'],
     link: 'https://search-api.longtu.club',
     secondaryLinks: [
       { label: 'Worker Service', link: 'http://160.19.158.217:33004/health' }
@@ -54,7 +54,7 @@ const PROJECTS = [
       '3rd-Party Syncing: Handled auto bulk proxy imports from external providers (e.g., ZingProxy, KiotProxy).',
       'Core APIs: Built fast RESTful APIs supporting CRUD operations, dynamic pagination, and detailed filtering, leveraging NestJS and MongoDB indexing to achieve an ultra-low latency of under 20ms per proxy distribution request.'
     ],
-    tags: ['Go', 'Fiber', 'Node.js', 'NestJS', 'MongoDB', 'Typegoose', 'Swagger', 'NATS', 'Docker'],
+    tags: ['Go', 'Fiber', 'Node.js/NestJS', 'MongoDB', 'Typegoose', 'Swagger', 'NATS', 'Docker'],
     link: 'http://65.19.178.20:51006/health'
   },
   {
