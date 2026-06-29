@@ -15,7 +15,39 @@ const PROJECTS = [
       'Maintenance: Resolved ad-hoc critical incidents within 24 hours and delivered bi-weekly progress reports to stakeholders.',
       'Vibe Coding: Leveraged Vibe Coding methodologies utilizing Cursor/Antigravity to accelerate frontend UI development (Vue.js, Naive UI) and Laravel API boilerplate by 40%, saving approximately [2-3 weeks] of initial setup time and optimizing engineering focus toward database tuning and queue management.'
     ],
-    tags: ['Vue 3', 'NaiveUI', 'Laravel', 'MySQL', 'Elasticsearch', 'Redis', 'Go', 'Fiber', 'Node.js/NestJS', 'MongoDB', 'Puppeteer', 'NATS', 'FFmpeg', 'Zabbix'],
+    architecture: 'Microservices Architecture',
+    techStack: [
+      {
+        layer: 'Admin Panel',
+        icon: 'fas fa-desktop',
+        color: '#3B82F6',
+        items: ['Vue 3', 'Naive UI', 'Laravel', 'MySQL', 'Elasticsearch']
+      },
+      {
+        layer: 'Automation & Workers',
+        icon: 'fas fa-robot',
+        color: '#8B5CF6',
+        items: ['Node.js', 'NestJS', 'MongoDB', 'Typegoose', 'Redis', 'Swagger']
+      },
+      {
+        layer: 'Media & Capture',
+        icon: 'fas fa-video',
+        color: '#10B981',
+        items: ['Puppeteer', 'FFmpeg', 'Xvfb']
+      },
+      {
+        layer: 'Infrastructure',
+        icon: 'fas fa-server',
+        color: '#F59E0B',
+        items: ['Zabbix', 'Telegram Bot SDK', 'Multi-ISP Proxies (8 ISPs)']
+      },
+      {
+        layer: 'DevOps & Deployment',
+        icon: 'fab fa-docker',
+        color: '#10B981',
+        items: ['Docker', 'GitLab CI/CD']
+      }
+    ],
     link: 'https://domain.longtu.club/',
     secondaryLinks: [
       { label: 'Check Automation Engine', link: 'http://160.19.158.249:33004/health' },
@@ -34,7 +66,27 @@ const PROJECTS = [
       'Core Search Engine: Designed the primary automation workers utilizing Node.js/NestJS to mimic human behaviors, utilizing dynamic proxy rotation and intelligent browser fingerprint profiling to achieve a [90%+] successful CAPTCHA bypass rate at scale.',
       'Data Pipelines: Engineered secure webhook callbacks to reliably extract, verify, and sync the exact domain SERP rankings and anchor text data back to central databases.'
     ],
-    tags: ['Go', 'Fiber', 'Node.js/NestJS', 'Puppeteer', 'MySQL', 'MongoDB', 'Redis', 'NATS', 'Docker'],
+    architecture: 'Distributed Automation System',
+    techStack: [
+      {
+        layer: 'Core API Gateway',
+        icon: 'fas fa-bolt',
+        color: '#3B82F6',
+        items: ['Go', 'Fiber', 'GORM', 'MySQL', 'NATS']
+      },
+      {
+        layer: 'Automation Workers',
+        icon: 'fas fa-robot',
+        color: '#8B5CF6',
+        items: ['Node.js', 'NestJS', 'Puppeteer', 'MongoDB', 'Typegoose', 'Redis']
+      },
+      {
+        layer: 'DevOps & Deployment',
+        icon: 'fab fa-docker',
+        color: '#10B981',
+        items: ['Docker', 'GitLab CI/CD']
+      }
+    ],
     link: 'https://search-api.longtu.club',
     secondaryLinks: [
       { label: 'Worker Service', link: 'http://160.19.158.217:33004/health' }
@@ -54,7 +106,27 @@ const PROJECTS = [
       '3rd-Party Syncing: Handled auto bulk proxy imports from external providers (e.g., ZingProxy, KiotProxy).',
       'Core APIs: Built fast RESTful APIs supporting CRUD operations, dynamic pagination, and detailed filtering, leveraging NestJS and MongoDB indexing to achieve an ultra-low latency of under 20ms per proxy distribution request.'
     ],
-    tags: ['Go', 'Fiber', 'Node.js/NestJS', 'MongoDB', 'Typegoose', 'Swagger', 'NATS', 'Docker'],
+    architecture: 'Proxy Management Service',
+    techStack: [
+      {
+        layer: 'Core Service',
+        icon: 'fas fa-cogs',
+        color: '#3B82F6',
+        items: ['Node.js', 'NestJS', 'MongoDB', 'Typegoose', 'Swagger']
+      },
+      {
+        layer: 'Messaging & Scheduling',
+        icon: 'fas fa-clock',
+        color: '#8B5CF6',
+        items: ['NATS', 'Cron Jobs']
+      },
+      {
+        layer: 'DevOps & Deployment',
+        icon: 'fab fa-docker',
+        color: '#10B981',
+        items: ['Docker', 'GitLab CI/CD']
+      }
+    ],
     link: 'http://65.19.178.20:51006/health'
   },
   {
@@ -69,7 +141,27 @@ const PROJECTS = [
       'Search System: Synced product data from MySQL to Elasticsearch to handle fast searches for large inventories.',
       'Frontend & Notifications: Configured OneSignal for push notifications and ran Lighthouse audits to fix frontend performance issues.'
     ],
-    tags: ['Laravel', 'Elasticsearch', 'ReactJs', 'MySQL', 'MongoDB', 'Redis'],
+    architecture: 'Decoupled',
+    techStack: [
+      {
+        layer: 'Backend',
+        icon: 'fas fa-server',
+        color: '#3B82F6',
+        items: ['Laravel', 'MySQL', 'Elasticsearch', 'Redis', 'MongoDB']
+      },
+      {
+        layer: 'Frontend',
+        icon: 'fas fa-paint-brush',
+        color: '#8B5CF6',
+        items: ['ReactJS']
+      },
+      {
+        layer: 'DevOps & Deployment',
+        icon: 'fab fa-docker',
+        color: '#10B981',
+        items: ['Docker', 'Github Actions']
+      }
+    ],
     link: 'https://www.facebook.com/45cmvn'
   }
 ];
@@ -165,11 +257,30 @@ export default function Projects() {
                   </ul>
                 </div>
 
-                {/* Technologies used */}
-                <div className="project-tags">
-                  {proj.tags.map((tag, tIdx) => (
-                    <span key={tIdx} className="tag">{tag}</span>
-                  ))}
+                {/* Architecture & Technologies */}
+                <div className="tech-stack-section">
+                  <div className="tech-stack-header">
+                    <i className="fas fa-layer-group tech-stack-icon"></i>
+                    <span className="tech-stack-title">Architecture & Technologies</span>
+                    <span className="tech-architecture-badge">{proj.architecture}</span>
+                  </div>
+                  <div className="tech-groups">
+                    {proj.techStack.map((group, gIdx) => (
+                      <div key={gIdx} className="tech-group" style={{ '--group-color': group.color }}>
+                        <div className="tech-group-label">
+                          <i className={group.icon} style={{ color: group.color }}></i>
+                          <span>{group.layer}</span>
+                        </div>
+                        <div className="tech-group-items">
+                          {group.items.map((item, iIdx) => (
+                            <span key={iIdx} className="tech-chip" style={{ '--chip-color': group.color }}>
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Live Demo & Action Links */}
