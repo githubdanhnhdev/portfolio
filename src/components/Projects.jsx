@@ -21,13 +21,19 @@ const PROJECTS = [
         layer: 'Admin Panel',
         icon: 'fas fa-desktop',
         color: '#3B82F6',
-        items: ['Vue 3', 'Naive UI', 'Laravel', 'MySQL', 'Elasticsearch']
+        items: ['Vue 3', 'Naive UI']
+      },
+      {
+        layer: 'Core API',
+        icon: 'fas fa-server',
+        color: '#F59E0B',
+        items: ['Laravel', 'MySQL', 'Redis', 'Elasticsearch', 'OpenAI SDK', 'searchapi.io', 'keywordtool.io', 'Swagger', 'PHPUnit Test']
       },
       {
         layer: 'Automation & Workers',
         icon: 'fas fa-robot',
         color: '#8B5CF6',
-        items: ['Node.js', 'NestJS', 'MongoDB', 'Typegoose', 'Redis', 'Swagger']
+        items: ['Node.js', 'NestJS', 'MongoDB', 'Typegoose']
       },
       {
         layer: 'Media & Capture',
